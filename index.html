@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>💖 Happy Valentine’s Day 💖</title>
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(135deg, #ffd6e8, #ffeef6);
+      min-height: 100vh;
+      overflow-x: hidden;
+      color: #4a2b36;
+    }
+
+    header {
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      text-align: center;
+      animation: fadeIn 2s ease;
+      position: relative;
+    }
+
+    .bow-emoji {
+      position: absolute;
+      top: 25px;
+      font-size: 2.5rem;
+      opacity: 0.8;
+    }
+
+    header .bow-emoji:first-of-type { left: 30px; }
+    header .bow-emoji:last-of-type { right: 30px; }
+
+    .bow.top-left { top: 30px; left: 30px; }
+    .bow.top-right { top: 30px; right: 30px; }
+
+
+    header h1 {
+      font-family: 'Pacifico', cursive;
+      font-size: 4rem;
+      margin-bottom: 20px;
+      animation: float 3s ease-in-out infinite;
+      color: #c9184a;
+      text-shadow: 0 2px 8px rgba(255,255,255,0.6);
+    }
+
+    header p {
+      font-size: 1.2rem;
+      max-width: 600px;
+      color: #6d2e46;
+      background: rgba(255,255,255,0.6);
+      padding: 15px 20px;
+      border-radius: 20px;
+    }
+
+    button {
+      margin-top: 30px;
+      padding: 15px 35px;
+      border: none;
+      border-radius: 30px;
+      background: #ff4b5c;
+      color: white;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: 0.3s;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+    }
+
+    button:hover {
+      transform: scale(1.1);
+      background: #ff1e38;
+    }
+
+    section {
+      padding: 80px 10%;
+      text-align: center;
+    }
+
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+      margin-top: 40px;
+    }
+
+    .gallery img {
+      width: 100%;
+      border-radius: 20px;
+      transition: 0.5s;
+      box-shadow: 0 15px 30px rgba(0,0,0,0.3);
+    }
+
+    .gallery img:hover {
+      transform: scale(1.05) rotate(2deg);
+    }
+
+    .card {
+      background: rgba(255,255,255,0.85);
+      padding: 40px;
+      border-radius: 25px;
+      box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+      animation: slideUp 1.5s ease;
+      max-width: 900px;
+      margin: 0 auto;
+      color: #4a2b36;
+    }
+
+    .letter {
+      margin-top: 30px;
+      text-align: left;
+      line-height: 1.9;
+      font-size: 1.1rem;
+      font-family: 'Georgia', serif;
+    }
+
+    .signature {
+      margin-top: 25px;
+      font-family: 'Pacifico', cursive;
+      font-size: 1.6rem;
+      text-align: right;
+    }
+
+    footer {
+      padding: 40px;
+      text-align: center;
+      font-size: 0.9rem;
+      background: rgba(0,0,0,0.15);
+    }
+
+    /* Floating hearts */
+    .heart {
+      position: fixed;
+      bottom: -20px;
+      font-size: 24px;
+      animation: rise 6s linear infinite;
+      opacity: 0.7;
+    }
+
+    @keyframes rise {
+      0% { transform: translateY(0) scale(1); opacity: 0; }
+      20% { opacity: 1; }
+      100% { transform: translateY(-110vh) scale(1.5); opacity: 0; }
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+
+    @keyframes slideUp {
+      from { transform: translateY(50px); opacity: 0; }
+      to { transform: translateY(0); opacity: 1; }
+    }
+
+    @keyframes float {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-15px); }
+    }
+  </style>
+</head>
+<body>
+  <section id="home">
+
+  <header>
+    <div class="bow-emoji">🎀</div>
+    <div class="bow-emoji">🎀</div>
+
+    <h1>Happy Valentine’s Day ❤️</h1>
+    <p>This little page holds words I sometimes struggle to say out loud — but my heart knows them well.</p>
+    <button onclick="goToLetter()">Read my letter 💌</button>
+  </header>
+  </section>
+
+  <section id="love" style="display:none">
+    <div class="card">
+      <h2>My Love Letter to You, Josiah 💗</h2>
+
+      <div class="letter">
+        <p>
+          My dearest Josiah,
+        </p>
+        <p>
+          Loving you from a distance isn’t always easy, but it has taught me what real love truly means.
+          Even with miles between us, you are the closest person to my heart — always.
+        </p>
+        <p>
+          Every message, every call, every late-night conversation feels like a small bridge between our worlds.
+          Love doesn’t need touch to exist — it needs trust, patience, and two hearts choosing each other every single day.
+        </p>
+        <p>
+          I miss you in ways words can barely explain.
+          I miss your presence, your voice, and the warmth I imagine when I think of you.
+          Yet even in the missing, I feel grateful — because missing you means loving you deeply.
+        </p>
+        <p>
+          One day, distance will just be a story we tell — something we survived together.
+          Until then, know this: no matter how far apart we are, you are my home.
+          I carry you with me in everything I do.
+        </p>
+        <p>
+          I choose you. Every day. In every timezone.
+        </p>
+      </div>
+
+      <div class="signature">
+        Forever yours 🤍
+      </div>
+
+      <button onclick="showSecret()" style="margin-top:30px">Click for something just for you 💞</button>
+      <p id="secret" style="display:none; margin-top:20px; font-style:italic">
+        No matter the distance, my heart always finds its way back to you, Josiah.
+      </p>
+    </div>
+
+    <div class="gallery">
+      <div style="font-size:4rem">🐱💗🎀</div>
+      <div style="font-size:4rem">💌✨🐾</div>
+      <div style="font-size:4rem">💞🎀🐱</div>
+    </div>
+  </section>
+
+  <footer>
+    💖 Made with love, just for you 💖
+  </footer>
+
+  <script>
+    function goToLetter() {
+      document.getElementById('home').style.display = 'none';
+      document.getElementById('love').style.display = 'block';
+      window.scrollTo(0,0);
+    }
+
+    function createHeart() {
+      const heart = document.createElement('div');
+      heart.classList.add('heart');
+      heart.innerHTML = '💖';
+      heart.style.left = Math.random() * 100 + 'vw';
+      heart.style.animationDuration = (Math.random() * 3 + 4) + 's';
+      document.body.appendChild(heart);
+
+      setTimeout(() => {
+        heart.remove();
+      }, 7000);
+    }
+
+    function showSecret() {
+      document.getElementById('secret').style.display = 'block';
+    }
+
+    setInterval(createHeart, 350);
+  </script>
+
+</body>
+</html>
